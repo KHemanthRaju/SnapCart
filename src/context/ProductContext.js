@@ -23,6 +23,10 @@ export const ProductProvider = ({ children }) => {
     getProductData();
   }, []);
 
+  const getProductDetail = (productId) => {
+    return productData.products.find(({ _id }) => _id === productId);
+  };
+
   return (
     <ProductContext.Provider
       value={{
