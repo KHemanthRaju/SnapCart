@@ -32,6 +32,7 @@ export const ProductProvider = ({ children }) => {
       value={{
         products: productData.products,
         categories: productData.categories,
+        getProductDetail,
       }}
     >
       {children}
