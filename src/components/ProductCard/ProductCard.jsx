@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AiTwotoneHeart } from "react-icons/ai";
 
-const ProductCard = ({ product }) => {
+export const ProductCard = ({ product }) => {
   const wishlistTimerId = useRef();
   const cartTimerId = useRef();
   const { addToCart, isProductInCart, isProductInWishlist, toggleWishlist } =
