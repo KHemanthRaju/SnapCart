@@ -5,10 +5,12 @@ import { MockAPI } from "./pages/MockMan/MockMan";
 import HomePage from "./pages/HomePage/HomePage";
 import { ProductListing } from "./pages/ProductListing/ProductListing";
 import { Product } from "./pages/Product/Product";
+import { Header } from "./components/HeaderComponent/Header";
 
 const App = () => {
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductListing />} />
