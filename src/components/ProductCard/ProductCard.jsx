@@ -2,6 +2,7 @@ import { useContext, useRef } from "react";
 import { CartContext } from "../../context/CartContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AiTwotoneHeart } from "react-icons/ai";
+import "../ProductCard/ProductCard.css";
 
 export const ProductCard = ({ product }) => {
   const wishlistTimerId = useRef();
@@ -15,10 +16,10 @@ export const ProductCard = ({ product }) => {
     <>
       <img
         className="product-image"
-        src="product.image"
+        src={product.image}
         alt="pro banner"
         loading="lazy"
-        onClick={() => navigate(`/products/$(product._id)`)}
+        onClick={() => navigate(`/products/${product._id}`)}
       />
       <button>
         <AiTwotoneHeart />

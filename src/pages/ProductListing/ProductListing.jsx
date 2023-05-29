@@ -3,6 +3,7 @@ import "../ProductListing/ProductListing.css";
 import { ProductContext } from "../../context/ProductContext";
 import { CartContext } from "../../context/CartContext";
 import Filters from "../../components/FilterComponent/Filters";
+import { ProductCard } from "../../components/ProductCard/ProductCard";
 
 export const ProductListing = () => {
   const { products } = useContext(ProductContext);
@@ -49,15 +50,32 @@ export const ProductListing = () => {
 
   return (
     <>
-      <Filters />
+      <aside>
+        <Filters />
+      </aside>
       <h2>Product Listings Page</h2>
       <section className="listing">
         <h3 className="listing-heading">
           Showing All products
           <span className="product-count">
-            (Showing {displayProduct.length} products)
+            ( Showing {displayProduct.length} products )
           </span>
         </h3>
+        <button
+          className="filter-mobile-view-btn"
+          onClick={() => setShowFilter(!showFilter)}
+        ></button>
+        {displayProduct.length === 0 ? (
+          <p className="empty-productlist">No products to display</p>
+        ) : (
+          <ul className="product-card-li">
+            {displayProduct.map((product) => (
+              <li key={product._id}>
+                <ProductCard product={product} />
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </>
   );

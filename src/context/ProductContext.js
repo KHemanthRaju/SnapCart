@@ -19,6 +19,8 @@ export const ProductProvider = ({ children }) => {
     }
   };
 
+  console.log(productData);
+
   useEffect(() => {
     getProductData();
   }, []);

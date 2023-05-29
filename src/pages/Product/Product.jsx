@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { ProductContext } from "../../context/ProductContext";
 import { useParams } from "react-router-dom";
+import "../Product/Product.css";
 
 export const Product = () => {
   const { productId } = useParams();
+  console.log(productId);
   const { getProductDetail } = useContext(ProductContext);
   const product = getProductDetail(productId);
   const {
