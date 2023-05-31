@@ -1,8 +1,9 @@
 import { ProductCardLandscape } from "../../components/ProductCardLandscape/ProductCardLandscape";
 import "./Cart.css";
-import { PriceCard } from "../components/price-component/PriceCard";
+import { PriceCard } from "../../components/PriceCard/PriceCard";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../../context/CartContext";
+
 export const Cart = () => {
   const { cart } = useContext(CartContext);
   return (

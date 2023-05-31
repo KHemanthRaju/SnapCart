@@ -1,0 +1,39 @@
+.price-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.price-detail-list li {
+  display: flex;
+  justify-content: space-between;
+}
+.discount-price::before {
+  content: "\20B9";
+}
+.price-detail-list li span:first-of-type {
+  font-weight: 600;
+}
+.total-price {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.saving-info {
+  font-size: 1.2rem;
+}
+.btn-place-order {
+  padding: 0.5rem;
+  border: none;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(14, 174, 87, 1) 0%,
+    rgba(12, 116, 117, 1) 90%
+  );
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price::before {
+  content: "\20B9";
+}
