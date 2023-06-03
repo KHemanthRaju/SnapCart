@@ -61,6 +61,7 @@ span {
   color: #fff;
   font-weight: 600;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 .btn-wishlist {
   position: relative;

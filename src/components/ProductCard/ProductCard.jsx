@@ -32,6 +32,7 @@ export const ProductCard = ({ product }) => {
     );
   };
   const authCheckCart = (product, place) => {
+    console.log(product);
     addToCart(product);
     if (isProductInWihlist(product._id)) {
       toggleWishlist(product);

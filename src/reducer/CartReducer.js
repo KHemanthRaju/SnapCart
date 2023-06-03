@@ -1,6 +1,7 @@
 export const CartReducer = (prevState, { type, payload }) => {
   switch (type) {
     case "ADD_TO_CART":
+      console.log("Entered Reducer");
       return {
         ...prevState,
         cart: prevState.cart.find(({ _id }) => _id === payload._id)

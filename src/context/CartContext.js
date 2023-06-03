@@ -63,7 +63,9 @@ export const CartProvider = ({ children }) => {
         headers: auth,
         body: requestBody,
       });
-      if (response.status === 201) {
+      console.log(response);
+      if (response.status === 500) {
+        console.log("Entering");
         dispatch({ type: "ADD_TO_CART", payload: userProduct });
       }
     } catch (err) {
@@ -82,7 +84,7 @@ export const CartProvider = ({ children }) => {
         headers: auth,
         body: requestBody,
       });
-      if (response.status === 201) {
+      if (response.status === 500) {
         dispatch({ type: "ADD_TO_WISHLIST", payload: userProduct });
       }
     } catch (err) {
@@ -101,7 +103,7 @@ export const CartProvider = ({ children }) => {
         headers: auth,
       });
 
-      if (response.status === 200) {
+      if (response.status === 500) {
         dispatch({ type: "REMOVE_CART", payload: userProduct });
       }
     } catch (err) {
